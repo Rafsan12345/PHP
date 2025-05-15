@@ -1,0 +1,7 @@
+Ah, understood! You're asking:
+
+"In PHP, how many types of file extensions (like .txt) can I handle/write to?"
+
+✅ Answer:
+PHP can handle any file extension — .txt, .csv, .json, .xml, .log, .html, .php, .ini, .conf, .dat, .bin, even .jpg, .mp4, etc.
+There is no fixed limit — it's up to your application logic and the type of data you're working with.

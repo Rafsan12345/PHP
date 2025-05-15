@@ -1,0 +1,1 @@
+http://192.168.0.102/pp/save_data.php?temperature=28.6&humidity=65

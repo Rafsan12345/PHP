@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read Data from PHP</title>
+    <script>
+        function loadData() {
+            fetch('http://192.168.0.105/pp/read_data.php')
+                .then(response => response.json())
+                .then(data => {
+                    let output = "<table border='1'><tr><th>Sensor</th><th>Location</th><th>Value1</th><th>Value2</th><th>Value3</th><th>Reading Time</th></tr>";
+                    for (let item of data) {
+                        output += "<tr>" +
+                            "<td>" + item.sensor + "</td>" +
+                            "<td>" + item.location + "</td>" +
+                            "<td>" + item.value1 + "</td>" +
+                            "<td>" + item.value2 + "</td>" +
+                            "<td>" + item.value3 + "</td>" +
+                            "<td>" + item.reading_time + "</td>" +
+                            "</tr>";
+                    }
+                    output += "</table>";
+                    document.getElementById('result').innerHTML = output;
+                })
+                .catch(error => {
+                    document.getElementById('result').innerText = 'Error: ' + error;
+                });
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Read Data from PHP</h2>
+    <button onclick="loadData()">Read Data</button>
+
+    <div id="result">No data loaded yet.</div>
+
+</body>
+</html>

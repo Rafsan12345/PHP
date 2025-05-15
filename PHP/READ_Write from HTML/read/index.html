@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read Data</title>
+    <script>
+        function loadData() {
+            fetch('http://192.168.0.102/pp/read_data.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('result').innerText = data;
+                })
+                .catch(error => {
+                    document.getElementById('result').innerText = 'Error: ' + error;
+                });
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Read Data from PHP</h2>
+    <button onclick="loadData()">Read Data</button>
+
+    <p id="result">No data loaded yet.</p>
+
+</body>
+</html>
