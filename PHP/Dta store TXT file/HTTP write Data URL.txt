@@ -1,1 +1,7 @@
 http://192.168.0.102/pp/save_data.php?temperature=28.6&humidity=65
+
+
+
+from NGROK 
+
+https://b65f-103-54-37-75.ngrok-free.app/pp/New%20folder/save_data.php?temperature=28.6&humidity=77
